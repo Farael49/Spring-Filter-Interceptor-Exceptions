@@ -15,6 +15,6 @@ The project shows within the "config" package how to simply handle an exception 
 This example was initially made to answer the following use case :
 An existing filter/interceptor does some processing involving an external HTTP call with WebClient, and when the WebClient throws a WebClientResponseException indicating a specific issue & status code (400, 404, ...) it is not properly forwarded and always results in an Internal Error 500.
 
-Handling exceptions with interceptors may look more cumbersome in the code, but 2 of the classes are only involved in configuring the interceptor, the exception handler is easier to setup and it can be reused across the project. 
+- Handling exceptions with interceptors may look more cumbersome in the code, but 2 of the classes are only involved in configuring the interceptor, the exception handler is easier to setup and it can be reused across the project. 
 
-Filters can be more tricky (not forgetting to call the filterChain, not messing too much with the Servlets, serializing the JSON/.. to return, ..), they can't use a ControllerAdvice/ExceptionHandler as they happen before controllers are resolved, but they do not depend on the MVC stack 
+- Filters can be more tricky (not forgetting to call the filterChain, not messing too much with the Servlets, serializing the JSON/.. to return, ..), they can't use a ControllerAdvice/ExceptionHandler as they happen before controllers are resolved, but they do not depend on the MVC stack 
