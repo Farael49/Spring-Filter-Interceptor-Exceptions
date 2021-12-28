@@ -17,4 +17,4 @@ An existing filter/interceptor does some processing involving an external HTTP c
 
 Handling exceptions with interceptors may look more cumbersome in the code, but 2 of the classes are only involved in configuring the interceptor, the exception handler is easier to setup and it can be reused across the project. 
 
-Filters can be more tricky (not forgetting to call the filterChain, not messing too much with the Servlets, ..), but they do not depend on the MVC stack 
+Filters can be more tricky (not forgetting to call the filterChain, not messing too much with the Servlets, serializing the JSON/.. to return, ..), but they do not depend on the MVC stack 
